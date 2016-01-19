@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D63E1FA1C4DC549005C67AB /* FTGLazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63E1F91C4DC549005C67AB /* FTGLazyImageView.swift */; };
 		3D63E21F1C4EC54A005C67AB /* FTGLazyImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D63E1F51C4DC4AE005C67AB /* FTGLazyImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D63E2471C4EEECC005C67AB /* FTGLazyImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63E2461C4EEECC005C67AB /* FTGLazyImageResult.swift */; };
 		3DE480231C4D9E1100D432BD /* FTGLazyImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE480181C4D9E1100D432BD /* FTGLazyImageView.framework */; };
 		3DE480281C4D9E1100D432BD /* FTGLazyImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE480271C4D9E1100D432BD /* FTGLazyImageViewTests.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		3D63E1F51C4DC4AE005C67AB /* FTGLazyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLazyImageView.h; sourceTree = "<group>"; };
 		3D63E1F61C4DC4AE005C67AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D63E1F91C4DC549005C67AB /* FTGLazyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGLazyImageView.swift; sourceTree = "<group>"; };
+		3D63E2461C4EEECC005C67AB /* FTGLazyImageResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGLazyImageResult.swift; sourceTree = "<group>"; };
 		3DE480181C4D9E1100D432BD /* FTGLazyImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FTGLazyImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE480221C4D9E1100D432BD /* FTGLazyImageViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTGLazyImageViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE480271C4D9E1100D432BD /* FTGLazyImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTGLazyImageViewTests.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				3D63E1F51C4DC4AE005C67AB /* FTGLazyImageView.h */,
 				3D63E1F61C4DC4AE005C67AB /* Info.plist */,
 				3D63E1F91C4DC549005C67AB /* FTGLazyImageView.swift */,
+				3D63E2461C4EEECC005C67AB /* FTGLazyImageResult.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D63E1FA1C4DC549005C67AB /* FTGLazyImageView.swift in Sources */,
+				3D63E2471C4EEECC005C67AB /* FTGLazyImageResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

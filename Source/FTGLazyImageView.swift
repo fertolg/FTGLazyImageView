@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FTGLazyImageView: UIImageView {
+public class FTGLazyImageView: UIImageView {
     
 //MARK:- Private Properties
     
@@ -22,7 +22,7 @@ class FTGLazyImageView: UIImageView {
     private(set) var downloaded: Bool = false
     
     // read & write
-    var imageURL: NSURL? {
+    public var imageURL: NSURL? {
         didSet {
             if self.imageURL != oldValue {
                 if self.downloading {
@@ -33,27 +33,27 @@ class FTGLazyImageView: UIImageView {
             }
         }
     }
-    var placeholderImage:UIImage? {
+    public var placeholderImage:UIImage? {
         didSet {
             if !self.downloaded {
                 self.image = self.placeholderImage
             }
         }
     }
-    var animatedTransition: Bool = true
-    var transitionDuration:CFTimeInterval = 0.25
-    var completionHandler: (imageView: FTGLazyImageView, error: NSError?) -> Void = { _ in }
+    public var animatedTransition: Bool = true
+    public var transitionDuration:CFTimeInterval = 0.25
+    public var completionHandler: (imageView: FTGLazyImageView, result: FTGLazyImageResult) -> Void = { _ in }
     
 //MARK:- View Lifecycle
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         self.placeholderImage = nil
         self.imageURL = nil
         super.init(coder: aDecoder)
         
     }
     
-    init(imageURL: NSURL, placeholderImage: UIImage?) {
+    public init(imageURL: NSURL, placeholderImage: UIImage?) {
         self.imageURL = imageURL
         self.placeholderImage = placeholderImage
         super.init(image: placeholderImage)
@@ -61,7 +61,7 @@ class FTGLazyImageView: UIImageView {
     
 //MARK:- Network Support
     
-    func startDownload() {
+    public func startDownload() {
         if self.imageURL == nil {
             return;
         }
@@ -77,7 +77,7 @@ class FTGLazyImageView: UIImageView {
             
             self.downloading = false
             
-            if error == nil {
+            if let data = data, image = UIImage(data: data) {
                 NSOperationQueue.mainQueue().addOperationWithBlock({
                     if self.animatedTransition {
                         let transition = CATransition()
@@ -87,19 +87,23 @@ class FTGLazyImageView: UIImageView {
                         self.layer .addAnimation(transition, forKey: nil)
                     }
                     
-                    self.image = UIImage(data: data!)
+                    self.image = image
                     self.downloaded = true
+                    
+                    let result = FTGLazyImageResult.Success(data: data, response: response, error: error)
+                    self.completionHandler(imageView: self, result: result)
                 })
+            } else {
+                let result = FTGLazyImageResult.Failure(data: data, response: response, error: error)
+                self.completionHandler(imageView: self, result: result)
             }
-            
-            self.completionHandler(imageView: self, error: error)
         })
         
         self.sessionTask?.resume()
         self.downloading = true
     }
     
-    func cancelDownload() {
+    public func cancelDownload() {
         if self.downloading {
             if let sessionTask = self.sessionTask {
                 sessionTask.cancel()
