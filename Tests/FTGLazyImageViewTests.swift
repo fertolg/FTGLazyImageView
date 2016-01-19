@@ -11,16 +11,6 @@ import FTGLazyImageView
 
 class FTGLazyImageViewTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testImageDownload() {
         let url = NSURL(string: "http://images.apple.com/home/images/og.jpg")
         let expectation = expectationWithDescription("load image")
