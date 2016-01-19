@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DE4801C1C4D9E1100D432BD /* Source in Headers */ = {isa = PBXBuildFile; fileRef = 3DE4801B1C4D9E1100D432BD /* Source */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D63E1FA1C4DC549005C67AB /* FTGLazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63E1F91C4DC549005C67AB /* FTGLazyImageView.swift */; };
+		3D63E21F1C4EC54A005C67AB /* FTGLazyImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D63E1F51C4DC4AE005C67AB /* FTGLazyImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DE480231C4D9E1100D432BD /* FTGLazyImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE480181C4D9E1100D432BD /* FTGLazyImageView.framework */; };
 		3DE480281C4D9E1100D432BD /* FTGLazyImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE480271C4D9E1100D432BD /* FTGLazyImageViewTests.swift */; };
 /* End PBXBuildFile section */
@@ -23,12 +24,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D63E1F51C4DC4AE005C67AB /* FTGLazyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLazyImageView.h; sourceTree = "<group>"; };
+		3D63E1F61C4DC4AE005C67AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D63E1F91C4DC549005C67AB /* FTGLazyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTGLazyImageView.swift; sourceTree = "<group>"; };
 		3DE480181C4D9E1100D432BD /* FTGLazyImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FTGLazyImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE4801B1C4D9E1100D432BD /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = ../Source; sourceTree = "<group>"; };
-		3DE4801D1C4D9E1100D432BD /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = ../Source; sourceTree = "<group>"; };
 		3DE480221C4D9E1100D432BD /* FTGLazyImageViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTGLazyImageViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE480271C4D9E1100D432BD /* FTGLazyImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FTGLazyImageViewTests.swift; path = ../Tests/FTGLazyImageViewTests.swift; sourceTree = "<group>"; };
-		3DE480291C4D9E1100D432BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Tests/Info.plist; sourceTree = "<group>"; };
+		3DE480271C4D9E1100D432BD /* FTGLazyImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTGLazyImageViewTests.swift; sourceTree = "<group>"; };
+		3DE480291C4D9E1100D432BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +73,11 @@
 		3DE4801A1C4D9E1100D432BD /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3DE4801B1C4D9E1100D432BD /* Source */,
-				3DE4801D1C4D9E1100D432BD /* Source */,
+				3D63E1F51C4DC4AE005C67AB /* FTGLazyImageView.h */,
+				3D63E1F61C4DC4AE005C67AB /* Info.plist */,
+				3D63E1F91C4DC549005C67AB /* FTGLazyImageView.swift */,
 			);
-			name = Source;
-			path = FTGLazyImageView;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		3DE480261C4D9E1100D432BD /* Tests */ = {
@@ -84,8 +86,7 @@
 				3DE480271C4D9E1100D432BD /* FTGLazyImageViewTests.swift */,
 				3DE480291C4D9E1100D432BD /* Info.plist */,
 			);
-			name = Tests;
-			path = FTGLazyImageViewTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +96,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE4801C1C4D9E1100D432BD /* Source in Headers */,
+				3D63E21F1C4EC54A005C67AB /* FTGLazyImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D63E1FA1C4DC549005C67AB /* FTGLazyImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,27 +312,30 @@
 		3DE4802D1C4D9E1100D432BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FTGLazyImageView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftoledo.FTGLazyImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3DE4802E1C4D9E1100D432BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FTGLazyImageView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftoledo.FTGLazyImageView;
@@ -342,7 +347,7 @@
 		3DE480301C4D9E1100D432BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FTGLazyImageViewTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftoledo.FTGLazyImageViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +357,7 @@
 		3DE480311C4D9E1100D432BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FTGLazyImageViewTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftoledo.FTGLazyImageViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
