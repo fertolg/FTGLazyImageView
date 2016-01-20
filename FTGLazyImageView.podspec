@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Fernando Toledo" => "fernando@ftoledo.com" }
   spec.social_media_url   = "http://twitter.com/ftoledo"
-  spec.platform     = :ios, "7.0"
+  spec.platform     = :ios, "8.0"
   spec.source       = { :git => "https://github.com/fertolg/FTGLazyImageView.git", :tag => spec.version.to_s }
   spec.source_files  = "Source", "Source/**/*.{h,swift}"
   spec.requires_arc = true
