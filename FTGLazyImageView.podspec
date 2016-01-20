@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "Fernando Toledo" => "fernando@ftoledo.com" }
   spec.social_media_url   = "http://twitter.com/ftoledo"
   spec.platform     = :ios, "8.0"
-  spec.source       = { :git => "https://github.com/fertolg/FTGLazyImageView.git", :tag => spec.version.to_s }
+  spec.source       = { :git => "https://github.com/fertolg/FTGLazyImageView.git", :tag => "v#{spec.version}", :submodules => true }
   spec.source_files  = "Source", "Source/**/*.{h,swift}"
   spec.requires_arc = true
 end
